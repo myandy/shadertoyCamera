@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ShaderToy</string>
+    <string name="picture">Picture</string>
+    <string name="save">Save</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+
+    <string name="filter_original">Origin</string>
+    <string name="filter_adore">Adore</string>
+    <string name="filter_amatorka">Amatorka</string>
+    <string name="filter_fairytale">Fairytale</string>
+    <string name="filter_flower">Flower</string>
+    <string name="filter_heart">Heart</string>
+    <string name="filter_highkey">Highkey</string>
+    <string name="filter_perfume">Perfume</string>
+    <string name="filter_processed">Processed</string>
+    <string name="filter_responsible">Responsible</string>
+</resources>
