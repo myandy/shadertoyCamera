@@ -10,6 +10,7 @@ public class FilterFactory {
     public static ArrayList<FilterItem> getPortraitFilterItem() {
         ArrayList<FilterItem> filters = new ArrayList<FilterItem>();
         filters.add(new FilterItem(null, FilterSDK.sContext.getString(R.string.filter_original), R.drawable.filter_people_original, 0));
+        filters.add(new FilterItem(FilterItem.GAUSS, "gauss", R.drawable.filter_people_nature, 0));
         filters.add(new FilterItem(R.raw.fokkkus, "fokkkus", R.drawable.filter_people_nature));
         filters.add(new FilterItem(R.raw.droste2, "droste2", R.drawable.filter_people_nature));
         filters.add(new FilterItem(R.raw.ripple_distortion, "ripple_distortion", R.drawable.filter_people_nature));

@@ -4,6 +4,7 @@ import android.text.TextUtils;
 
 import com.anddymao.shadertoy.filterlibrary.base.BaseOriginalFilter;
 import com.anddymao.shadertoy.filterlibrary.base.ColorLookupFilter;
+import com.anddymao.shadertoy.filterlibrary.gauss.GPUImageGaussianBlurFilter;
 
 
 public class FilterItem {
@@ -11,6 +12,7 @@ public class FilterItem {
     private String mTablePath;
 
     public static final String LUT_ADORE = "filter/adore.png";
+    public static final String GAUSS = "gauss";
     public static final String LUT_AMATORKA = "filter/amatorka.png";
     public static final String LUT_FAIRYTALE = "filter/fairytale.png";
     public static final String LUT_FLOWER = "filter/flower.png";
@@ -53,7 +55,9 @@ public class FilterItem {
             return new EmptyGPUImageFilter();
         }
         BaseOriginalFilter filter;
-        if (mIsShade) {
+        if (TextUtils.equals(mTablePath, GAUSS)) {
+            filter = new GPUImageGaussianBlurFilter(1.0f);
+        } else if (mIsShade) {
             filter = new ShaderToyFilter(mShade);
         } else {
             filter = new ColorLookupFilter(mTablePath);

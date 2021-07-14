@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/filterlibrary/filterlibrary.iml" filepath="$PROJECT_DIR$/filterlibrary/filterlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/shadertoyCamera.iml" filepath="$PROJECT_DIR$/shadertoyCamera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/shadertoyCamera.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/shadertoyCamera.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filterlibrary/shadertoyCamera.filterlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/filterlibrary/shadertoyCamera.filterlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/work.shadertoyCamera.iml" filepath="$PROJECT_DIR$/.idea/modules/work.shadertoyCamera.iml" />
     </modules>
   </component>
 </project>

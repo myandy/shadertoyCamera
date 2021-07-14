@@ -59,7 +59,7 @@ public class ColorLookupFilter extends BaseOriginalFilter {
     // 代表从路径获得的纹理单元
     public int mLookupSourceTexture = OpenGlUtils.NO_TEXTURE;
 
-    protected void onInit() {
+    public void onInit() {
         super.onInit();
         mLookupTextureUniform = GLES20.glGetUniformLocation(getProgram(), "inputImageTexture2");
         mGLStrengthLocation = GLES20.glGetUniformLocation(getProgram(), "strength");

@@ -174,13 +174,16 @@ public class GPUImage {
         renderer.setRotation(Rotation.NORMAL,
                 mRenderer.isFlippedHorizontally(), !mRenderer.isFlippedVertically());
         renderer.setScaleType(mScaleType);
-        PixelBuffer buffer = new PixelBuffer(bitmap.getWidth(), bitmap.getHeight());
-        renderer.setImageBitmap(bitmap, false);
+
+        Bitmap newBitmap = Bitmap.createScaledBitmap(bitmap,bitmap.getWidth(),bitmap.getHeight(),true);
+
+        PixelBuffer buffer = new PixelBuffer(newBitmap.getWidth(), newBitmap.getHeight());
+        renderer.setImageBitmap(newBitmap, false);
         buffer.setRenderer(renderer);
         renderer.setDrawBoundLines(false);
 
         //通过重复利用bitmap,renderer的recycle直接设置为false
-        Bitmap result = buffer.getBitmap(recycle ? bitmap : null);
+        Bitmap result = buffer.getBitmap(recycle ? newBitmap : null);
         mFilter.destroy();
         renderer.deleteImage();
         buffer.destroy();

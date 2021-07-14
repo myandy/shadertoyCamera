@@ -18,7 +18,7 @@ public class OesTextureFilter extends GPUImageFilter {
         super(OpenGlUtils.readShaderFromRawResource(FilterSDK.sContext, R.raw.default_vertex), OpenGlUtils.readShaderFromRawResource(FilterSDK.sContext, R.raw.oes_fragment_sharder));
     }
 
-    protected void onInit() {
+    public void onInit() {
         super.onInit();
         mTextureTransformMatrixLocation = GLES20.glGetUniformLocation(mGLProgId, "textureTransform");
     }

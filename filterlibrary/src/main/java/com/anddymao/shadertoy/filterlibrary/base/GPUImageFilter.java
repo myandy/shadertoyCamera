@@ -47,7 +47,7 @@ public class GPUImageFilter {
     protected boolean mIsInitialized;
     protected FloatBuffer mGLCubeBuffer;
     protected FloatBuffer mGLTextureBuffer;
-    protected int mOutputWidth, mOutputHeight;
+    public int mOutputWidth, mOutputHeight;
 
     protected int mTextureId = OpenGlUtils.NO_TEXTURE;
 
@@ -93,7 +93,7 @@ public class GPUImageFilter {
         onInitialized();
     }
 
-    protected void onInit() {
+    public void onInit() {
         mGLProgId = OpenGlUtils.loadProgram(mVertexShader, mFragmentShader);
         mGLAttribPosition = GLES20.glGetAttribLocation(mGLProgId, "position");
         mGLUniformTexture = GLES20.glGetUniformLocation(mGLProgId, "inputImageTexture");
@@ -330,7 +330,7 @@ public class GPUImageFilter {
         });
     }
 
-    protected void setFloat(final int location, final float floatValue) {
+    public void setFloat(final int location, final float floatValue) {
         runOnDraw(new Runnable() {
             @Override
             public void run() {
